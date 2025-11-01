@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav className="flex gap-1  bg-white/10 backdrop-blur-md border rounded-full border-white/15 p-0.5">
+    <nav className="flex gap-1  bg-white/10 backdrop-blur border rounded-full border-white/15 p-0.5">
       <a href="#" className="nav-item">
         Home
       </a>
