@@ -1,12 +1,14 @@
 import Header from "./components/Header";
-import Hero from "./components/Hero";
+import Hero from "./sections/Hero";
+import ProjectSection from "./sections/ProjectSection";
 
 function App() {
   return (
-    <div className="relative">
+    <>
       <Header />
       <Hero />
-    </div>
+      <ProjectSection />
+    </>
   );
 }
 

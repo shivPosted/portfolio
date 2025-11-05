@@ -1,8 +1,8 @@
 import Arrowdown from "../assets/icons/arrow-down";
 import memojiLaptop from "../assets/images/memoji-computer.png";
-import GrainOverlay from "./GrainOverlay";
-import HeroOrbit from "./HeroOrbit";
-import RingOverlay from "./RingOverlay";
+import GrainOverlay from "../components/GrainOverlay";
+import HeroOrbit from "../components/HeroOrbit";
+import RingOverlay from "../components/RingOverlay";
 
 function Hero() {
   return (
