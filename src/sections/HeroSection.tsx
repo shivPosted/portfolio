@@ -4,7 +4,7 @@ import GrainOverlay from "../components/GrainOverlay";
 import HeroOrbit from "../components/HeroOrbit";
 import RingOverlay from "../components/RingOverlay";
 
-function Hero() {
+function HeroSection() {
   return (
     <div className="container py-32 md:py-40 lg:py-50 flex flex-col gap-8 items-center justify-center mx-auto overflow-x-clip z-100">
       <div className="flex flex-col items-center">
@@ -54,4 +54,4 @@ function Hero() {
     </div>
   );
 }
-export default Hero;
+export default HeroSection;

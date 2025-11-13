@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import AboutSection from "./sections/AboutSection";
-import Hero from "./sections/Hero";
+import HeroSection from "./sections/HeroSection";
 import ProjectSection from "./sections/ProjectSection";
 import TapeSection from "./sections/TapeSection";
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
+      <HeroSection />
       <ProjectSection />
       <TapeSection />
       <AboutSection />

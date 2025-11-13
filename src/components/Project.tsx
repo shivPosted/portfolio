@@ -16,7 +16,7 @@ type ProjectPropsType = ComponentPropsWithoutRef<"li"> & {
 function Project({ projectData }: ProjectPropsType) {
   return (
     <li>
-      <Card>
+      <Card className="flex-col gap-6 md:items-start md:mx-6 lg:flex-row justify-center items-center px-6 pt-6 ">
         <div>
           <div>
             <h3 className="text-emerald-300 text-lg">{projectData.name}</h3>
@@ -24,7 +24,7 @@ function Project({ projectData }: ProjectPropsType) {
               {projectData.description}
             </h4>
           </div>
-          <div className="mt-4 space-y-2 border-t-2 border-t-white/30">
+          <ul className="mt-4 space-y-2 border-t-2 border-t-white/30">
             {projectData?.projectHighlights.map((highlight) => (
               <li
                 key={highlight}
@@ -41,7 +41,7 @@ function Project({ projectData }: ProjectPropsType) {
                 <Arrowup width="16" height="16" />
               </button>
             </a>
-          </div>
+          </ul>
         </div>
         <figure className="w-full">
           <img
