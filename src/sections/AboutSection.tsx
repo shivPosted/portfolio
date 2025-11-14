@@ -94,7 +94,7 @@ function AboutSection() {
               {hobbies.map((hobby) => (
                 <div
                   key={hobby.name}
-                  className="inline-flex gap-3 items-center rounded-full bg-gradient-to-r from-emerald-300 to-sky-400  py-1.5 px-6 absolute z-100"
+                  className="inline-flex gap-3 items-center rounded-full bg-gradient-to-r from-emerald-300 to-sky-400  py-1.5 px-6 absolute"
                   style={{
                     left: hobby.left,
                     top: hobby.top,
@@ -108,12 +108,20 @@ function AboutSection() {
               ))}
             </div>
           </Card>
-          <Card>
-            <figure>
-              <img src={StaticMapImg} alt="static map of location" />
+          <Card className="flex-none h-[320px] relative">
+            <figure className="size-full object-cover object-top-left">
+              <img
+                src={StaticMapImg}
+                alt="static map of location"
+                className="w-full"
+              />
             </figure>
-            <figure>
-              <img src={MyAvatarImg} alt="Me emoji image" />
+            <figure className="absolute flex justify-center items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 ">
+              <img
+                src={MyAvatarImg}
+                alt="Me emoji image"
+                className="w-[90%] rounded-full "
+              />
             </figure>
           </Card>
         </div>
