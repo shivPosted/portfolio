@@ -54,76 +54,80 @@ const hobbies = [
 function AboutSection() {
   return (
     <div className="my-32">
-      <div className="container">
+      <div className="container mx-auto">
         <SectionHeader
           eyebrow="About Me"
           heading="A Glimpse into My World"
           description="Learn more about who I am, what I do and what inspires me."
         />
-        <div className="mt-20 flex flex-col gap-8">
-          <Card className="flex-col items-center h-[320px]">
-            <CardHeader
-              title="My Reads"
-              description="Explore the books shaping my perspectives."
-            />
-            <figure className="w-40 mt-8">
-              <img
-                src={BookImg}
-                alt="Atomic habits book cover"
-                className="w-full"
+        <div className="mt-20 flex flex-col gap-8 mx-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+            <Card className="flex-col items-center h-[320px] md:col-span-2 lg:col-span-1">
+              <CardHeader
+                title="My Reads"
+                description="Explore the books shaping my perspectives."
               />
-            </figure>
-          </Card>
-          <Card className="flex-col items-center h-[320px]">
-            <CardHeader
-              title="My Toolbox"
-              description="
+              <figure className="w-40 mt-8 md:mt-4">
+                <img
+                  src={BookImg}
+                  alt="Atomic habits book cover"
+                  className="w-full"
+                />
+              </figure>
+            </Card>
+            <Card className="flex-col items-center h-[320px] md:col-span-3 lg:col-span-2">
+              <CardHeader
+                title="My Toolbox"
+                description="
                 Explore the technologies and tools that I use to create
                 exceptional digital experience.
               "
-            />
-            <Skills innerClassNameWrapper="mt-1.5" />
-            <Skills innerClassNameWrapper="mt-1.5 -translate-x-1/2" />
-          </Card>
-          <Card className="flex-col items-center h-[320px]">
-            <CardHeader
-              title="Beyond the Code"
-              description="Explore my interests and hobbies beyond the digital realm"
-            />
-            <div className="relative size-full flex-1">
-              {hobbies.map((hobby) => (
-                <div
-                  key={hobby.name}
-                  className="inline-flex gap-3 items-center rounded-full bg-gradient-to-r from-emerald-300 to-sky-400  py-1.5 px-6 absolute"
-                  style={{
-                    left: hobby.left,
-                    top: hobby.top,
-                  }}
-                >
-                  <span className="text-gray-950 font-medium">
-                    {hobby.name}
-                  </span>
-                  <span>{hobby.icon}</span>
-                </div>
-              ))}
-            </div>
-          </Card>
-          <Card className="flex-none h-[320px] relative">
-            <figure className="size-full object-cover object-top-left">
-              <img
-                src={StaticMapImg}
-                alt="static map of location"
-                className="w-full"
               />
-            </figure>
-            <figure className="absolute flex justify-center items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 ">
-              <img
-                src={MyAvatarImg}
-                alt="Me emoji image"
-                className="w-[90%] rounded-full "
+              <Skills innerClassNameWrapper="mt-1.5" />
+              <Skills innerClassNameWrapper="mt-1.5 -translate-x-1/2" />
+            </Card>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+            <Card className="flex-col items-center h-[320px] md:col-span-3 lg:col-span-2">
+              <CardHeader
+                title="Beyond the Code"
+                description="Explore my interests and hobbies beyond the digital realm"
               />
-            </figure>
-          </Card>
+              <div className="relative size-full flex-1">
+                {hobbies.map((hobby) => (
+                  <div
+                    key={hobby.name}
+                    className="inline-flex gap-3 items-center rounded-full bg-gradient-to-r from-emerald-300 to-sky-400  py-1.5 px-6 absolute"
+                    style={{
+                      left: hobby.left,
+                      top: hobby.top,
+                    }}
+                  >
+                    <span className="text-gray-950 font-medium">
+                      {hobby.name}
+                    </span>
+                    <span>{hobby.icon}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
+            <Card className="flex-none h-[320px] relative md:col-span-2 lg:col-span-1">
+              <figure className="w-full h-full overflow-hidden">
+                <img
+                  src={StaticMapImg}
+                  alt="static map of location"
+                  className="w-full h-full object-cover object-center"
+                />
+              </figure>
+              <figure className="absolute flex justify-center items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 ">
+                <img
+                  src={MyAvatarImg}
+                  alt="Me emoji image"
+                  className="w-[90%] rounded-full "
+                />
+              </figure>
+            </Card>
+          </div>
         </div>
       </div>
     </div>
