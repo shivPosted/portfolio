@@ -53,8 +53,8 @@ const hobbies = [
 
 function AboutSection() {
   return (
-    <div className="my-32">
-      <div className="container mx-auto">
+    <div className="mt-32 lg:mb-52">
+      <div className="container mx-auto lg:max-w-[80%]">
         <SectionHeader
           eyebrow="About Me"
           heading="A Glimpse into My World"
