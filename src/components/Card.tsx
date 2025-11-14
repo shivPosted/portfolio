@@ -8,7 +8,7 @@ function Card({ children, className }: CardPropType) {
   return (
     <div
       className={[
-        "flex  rounded-3xl relative bg-slate-800/90 overflow-clip",
+        "flex rounded-3xl relative bg-slate-800/90 overflow-clip mx-3",
         className,
       ].join(" ")}
     >

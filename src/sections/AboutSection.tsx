@@ -10,22 +10,44 @@ const hobbies = [
   {
     name: "Gaming",
     icon: "🎮",
+    left: "5%",
+    top: "5%",
   },
   {
     name: "Music",
     icon: "🎧",
-  },
-  {
-    name: "Fitness",
-    icon: "💪",
+    left: "50%",
+    top: "5%",
   },
   {
     name: "Reading",
     icon: "📖",
+    left: "35%",
+    top: "40%",
+  },
+  {
+    name: "Fitness",
+    icon: "💪",
+    left: "10%",
+    top: "35%",
   },
   {
     name: "Riding",
     icon: "🚴",
+    left: "70%",
+    top: "45%",
+  },
+  {
+    name: "Anime",
+    icon: "🍿",
+    left: "5%",
+    top: "65%",
+  },
+  {
+    name: "Photography",
+    icon: "📸",
+    left: "45%",
+    top: "70%",
   },
 ];
 
@@ -38,7 +60,7 @@ function AboutSection() {
           heading="A Glimpse into My World"
           description="Learn more about who I am, what I do and what inspires me."
         />
-        <div className="mt-20">
+        <div className="mt-20 flex flex-col gap-8">
           <Card className="flex-col items-center h-[320px]">
             <CardHeader
               title="My Reads"
@@ -60,18 +82,27 @@ function AboutSection() {
                 exceptional digital experience.
               "
             />
-            <Skills />
-            <Skills />
+            <Skills innerClassNameWrapper="mt-1.5" />
+            <Skills innerClassNameWrapper="mt-1.5 -translate-x-1/2" />
           </Card>
-          <Card>
+          <Card className="flex-col items-center h-[320px]">
             <CardHeader
               title="Beyond the Code"
               description="Explore my interests and hobbies beyond the digital realm"
             />
-            <div>
+            <div className="relative size-full flex-1">
               {hobbies.map((hobby) => (
-                <div key={hobby.name}>
-                  <span>{hobby.name}</span>
+                <div
+                  key={hobby.name}
+                  className="inline-flex gap-3 items-center rounded-full bg-gradient-to-r from-emerald-300 to-sky-400  py-1.5 px-6 absolute z-100"
+                  style={{
+                    left: hobby.left,
+                    top: hobby.top,
+                  }}
+                >
+                  <span className="text-gray-950 font-medium">
+                    {hobby.name}
+                  </span>
                   <span>{hobby.icon}</span>
                 </div>
               ))}

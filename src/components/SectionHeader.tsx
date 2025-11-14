@@ -12,7 +12,7 @@ function SectionHeader({
   description,
 }: SectionHeaderPropTypes) {
   return (
-    <div className="text-center">
+    <div className="text-center mx-2">
       <div className="flex justify-center tracking-widest">
         <h1 className="text-lg bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text font-semibold uppercase">
           {eyebrow}

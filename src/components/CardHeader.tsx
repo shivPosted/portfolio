@@ -8,7 +8,7 @@ function CardHeader({
   description: string;
 }) {
   return (
-    <div className="flex flex-col px-4 pt-6">
+    <div className="flex flex-col px-6 pt-6 pb-2">
       <div className="inline-flex items-center gap-2">
         <StarIcon size="size-9" color="text-emerald-300" />
         <h3 className="font-calistogo text-3xl">{title}</h3>

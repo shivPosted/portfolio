@@ -9,15 +9,15 @@ import NodeJSIcon from "../assets/icons/nodejsicon";
 
 const skills = [
   {
-    name: "Javascript",
+    name: "JavaScript",
     icon: SquareJSIcon,
   },
   {
-    name: "HTML",
+    name: "HTML5",
     icon: HTML5,
   },
   {
-    name: "CSS",
+    name: "CSS3",
     icon: CSS3,
   },
   {
@@ -29,7 +29,7 @@ const skills = [
     icon: ReactIcon,
   },
   {
-    name: "Github",
+    name: "GitHub",
     icon: Github,
   },
   {
@@ -38,10 +38,15 @@ const skills = [
   },
 ];
 
-function Skills() {
+function Skills({ innerClassNameWrapper }: { innerClassNameWrapper?: string }) {
   return (
     <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] pt-4">
-      <div className="gap-6 py-0.5">
+      <div
+        className={[
+          "flex-none space-x-6 py-0.5 pr-6",
+          innerClassNameWrapper,
+        ].join(" ")}
+      >
         {skills.map((skill) => (
           <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
         ))}
