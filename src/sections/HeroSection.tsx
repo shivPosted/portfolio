@@ -6,7 +6,7 @@ import RingOverlay from "../components/RingOverlay";
 
 function HeroSection() {
   return (
-    <div className="container lg:max-w-[80%] py-32 md:py-40 lg:py-50 flex flex-col gap-8 items-center justify-center mx-auto overflow-x-clip z-100">
+    <div className="container lg:max-w-[80%] py-32 md:py-40 lg:py-50 flex flex-col gap-8 items-center justify-center mx-auto overflow-hidden z-100">
       <div className="flex flex-col items-center">
         <figure className="w-[100px] h-[100px]">
           <img
@@ -51,8 +51,8 @@ function HeroSection() {
         <RingOverlay size="xl" />
         <RingOverlay size="2xl" />
         <RingOverlay size="3xl" />
+        <HeroOrbit />
       </div>
-      <HeroOrbit />
     </div>
   );
 }

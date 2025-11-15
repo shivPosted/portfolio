@@ -5,7 +5,7 @@ type RingOverlayProps = ComponentPropsWithoutRef<"div"> & {
 };
 
 const sizeMapping = {
-  sm: "size-[62px]",
+  sm: "size-[620px]",
   md: "size-[820px]",
   lg: "size-[1020px]",
   xl: "size-[1220px]",
@@ -20,7 +20,6 @@ function RingOverlay({ size }: RingOverlayProps) {
         "border-2 border-emerald-300/5 rounded-full inset-0",
         "shadow-[0_0_80px_inset] shadow-emerald-300/5 ",
         "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
-        "hidden md:block",
         sizeMapping[size],
       ].join(" ")}
     ></div>
