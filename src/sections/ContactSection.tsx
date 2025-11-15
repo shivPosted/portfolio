@@ -3,8 +3,8 @@ import Card from "../components/Card";
 
 function ContactSection() {
   return (
-    <div className="my-14 lg:my-24">
-      <div className="container lg:max-w-[80%] mx-auto">
+    <div className="my-14 md:my-24 lg:my-24 md:mb-16">
+      <div className="container lg:max-w-[80%] mx-auto md:px-3">
         <Card color="flex-col items-center bg-gradient-to-r from-emerald-300/85 to-sky-400/85 text-center md:text-left text-gray-900 px-10 py-8 ">
           <div className="flex flex-col md:flex-row gap-8 items-center md:gap-16">
             <div>
