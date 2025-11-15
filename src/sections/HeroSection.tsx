@@ -16,7 +16,9 @@ function HeroSection() {
           />
         </figure>
         <div className="inline-flex items-center gap-4 bg-gray-950 border border-gray-800 rounded-lg px-4 py-1.5">
-          <div className="size-2.5 rounded-full bg-green-500"></div>
+          <div className="size-2.5 rounded-full bg-green-500 relative">
+            <div className="size-2.5 rounded-full bg-green-500 absolute animate-ping"></div>
+          </div>
           <span className="text-sm font-medium">
             Available for new projects
           </span>

@@ -16,6 +16,16 @@ body {
 
   --container-padding: 1rem;
   --container-padding-md: 2rem;
+
+  /*animation*/
+
+  @keyframes ping {
+    75%,
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
 }
 
 @layer components {
