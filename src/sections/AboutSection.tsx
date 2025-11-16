@@ -5,6 +5,8 @@ import StaticMapImg from "../assets/images/jaipur-map.png";
 import MyAvatarImg from "../assets/images/my-avatar.jpg";
 import CardHeader from "../components/CardHeader";
 import Skills from "../components/Skills";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const hobbies = [
   {
@@ -52,6 +54,7 @@ const hobbies = [
 ];
 
 function AboutSection() {
+  const contraintRef = useRef(null);
   return (
     <div className="mt-32 lg:mb-52">
       <div className="container mx-auto lg:max-w-[80%]">
@@ -83,8 +86,11 @@ function AboutSection() {
                 exceptional digital experience.
               "
               />
-              <Skills innerClassNameWrapper="mt-1.5" />
-              <Skills innerClassNameWrapper="mt-1.5 -translate-x-1/2" />
+              <Skills innerClassNameWrapper="mt-1.5" animationType="left" />
+              <Skills
+                innerClassNameWrapper="mt-1.5 -translate-x-1/2"
+                animationType="right"
+              />
             </Card>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
@@ -93,21 +99,23 @@ function AboutSection() {
                 title="Beyond the Code"
                 description="Explore my interests and hobbies beyond the digital realm"
               />
-              <div className="relative size-full flex-1">
+              <div className="relative size-full flex-1" ref={contraintRef}>
                 {hobbies.map((hobby) => (
-                  <div
+                  <motion.div
                     key={hobby.name}
                     className="inline-flex gap-3 items-center rounded-full bg-gradient-to-r from-emerald-300 to-sky-400  py-1.5 px-6 absolute"
                     style={{
                       left: hobby.left,
                       top: hobby.top,
                     }}
+                    drag
+                    dragConstraints={contraintRef}
                   >
                     <span className="text-gray-950 font-medium">
                       {hobby.name}
                     </span>
                     <span>{hobby.icon}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </Card>
@@ -119,7 +127,9 @@ function AboutSection() {
                   className="w-full h-full object-cover object-center"
                 />
               </figure>
-              <figure className="absolute flex justify-center items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 ">
+              <figure className="absolute flex justify-center items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full">
+                <div className="bg-gradient-to-r from-emerald-300 to-sky-400 size-20 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 -z-10 rounded-full"></div>
+                <div className="bg-gradient-to-r from-emerald-300 to-sky-400 size-22 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 -z-20 rounded-full animate-ping [animation-duration:2s]"></div>
                 <img
                   src={MyAvatarImg}
                   alt="Me emoji image"

@@ -6,6 +6,7 @@ import Chrome from "../assets/icons/chrome";
 import ReactIcon from "../assets/icons/react";
 import Github from "../assets/icons/github";
 import NodeJSIcon from "../assets/icons/nodejsicon";
+import { Fragment } from "react/jsx-runtime";
 
 const skills = [
   {
@@ -38,17 +39,29 @@ const skills = [
   },
 ];
 
-function Skills({ innerClassNameWrapper }: { innerClassNameWrapper?: string }) {
+function Skills({
+  innerClassNameWrapper,
+  animationType,
+}: {
+  innerClassNameWrapper?: string;
+  animationType: string;
+}) {
   return (
     <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] pt-4">
       <div
         className={[
           "flex-none space-x-6 py-0.5 pr-6",
           innerClassNameWrapper,
+          "[animation-duration:40s]",
+          `${animationType === "left" ? "animate-tape-left" : "animate-tape-right"}`,
         ].join(" ")}
       >
-        {skills.map((skill) => (
-          <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
+        {Array.from([skills, skills]).map((arrayOfSkills, ind) => (
+          <Fragment key={ind}>
+            {arrayOfSkills.map((skill) => (
+              <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
+            ))}
+          </Fragment>
         ))}
       </div>
     </div>
