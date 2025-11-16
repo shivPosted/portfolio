@@ -18,12 +18,21 @@ body {
   --container-padding-md: 2rem;
 
   /*animation*/
+  --animate-tape: tape 1s linear infinite;
 
   @keyframes ping {
     75%,
     100% {
       transform: scale(3);
       opacity: 0;
+    }
+  }
+  @keyframes tape {
+    0% {
+      tranform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
     }
   }
 }
