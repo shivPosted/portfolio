@@ -11,12 +11,18 @@ type ProjectPropsType = ComponentPropsWithoutRef<"li"> & {
     liveURL: string;
     img: string;
   };
+  stickyTopPosition: number;
 };
 
-function Project({ projectData }: ProjectPropsType) {
+function Project({ projectData, stickyTopPosition }: ProjectPropsType) {
   return (
-    <li>
-      <Card className="flex-col gap-6 md:items-start md:mx-6 lg:flex-row justify-center items-center px-6 pt-6 ">
+    <li
+      className="px-3 sticky"
+      style={{
+        top: `${stickyTopPosition}px`,
+      }}
+    >
+      <Card className="flex-col gap-6 md:items-start md:mx-6 lg:flex-row justify-center items-center px-6 pt-6">
         <div>
           <div>
             <h3 className="text-emerald-300 text-lg">{projectData.name}</h3>

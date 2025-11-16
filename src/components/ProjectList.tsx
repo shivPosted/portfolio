@@ -38,8 +38,12 @@ const projectData = [
 function ProjectList() {
   return (
     <ul className="flex flex-col gap-8 justify-center">
-      {projectData.map((data) => (
-        <Project key={data.name} projectData={data} />
+      {projectData.map((data, index) => (
+        <Project
+          key={data.name}
+          projectData={data}
+          stickyTopPosition={64 + index * 30}
+        />
       ))}
     </ul>
   );
