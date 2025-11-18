@@ -1,8 +1,8 @@
 import Project from "./Project";
-import omnifoodProjectThumbnail from "../assets/images/omnifood-landing-page.png";
-import worldiwiseProjectThumbnail from "../assets/images/worldwise-landing-page.png";
-import fastPizzaProjectThumbnail from "../assets/images/omnifood-landing-page.png";
-import usePopCornProjectThumbnail from "../assets/images/usepopcorn-landing-page.png";
+import omnifoodProjectThumbnail from "../assets/images/omnifood-screenshot.png";
+import worldiwiseProjectThumbnail from "../assets/images/worldwise-screenshot.png";
+import fastPizzaProjectThumbnail from "../assets/images/pizza-screenshot.png";
+import usePopCornProjectThumbnail from "../assets/images/usePopcorn-screenshot.png";
 
 const projectData = [
   {

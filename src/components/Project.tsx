@@ -50,11 +50,17 @@ function Project({ projectData, stickyTopPosition }: ProjectPropsType) {
           </ul>
         </div>
         <figure className="w-full">
-          <img
-            src={projectData.img}
-            alt={`${projectData.name} thumbnail image`}
-            className="size-full"
-          />
+          <div className="border border-[#71717b] max-w-max rounded-t-xl border-b-transparent">
+            <div className="relative mx-auto border-[12px] border-gray-900 rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
+              <div className="rounded-lg overflow-hidden h-[156px] md:h-[278px]">
+                <img
+                  src={projectData.img}
+                  alt={`${projectData.name} thumbnail image`}
+                  className="size-full"
+                />
+              </div>
+            </div>
+          </div>
         </figure>
       </Card>
     </li>
