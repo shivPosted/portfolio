@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# React Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modern portfolio website built with React, Vite, and Tailwind CSS. It showcases my projects, skills, and provides a way for visitors to contact me.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Component-based architecture:** Built with reusable React components.
+- **Modern tooling:** Utilizes Vite for a fast development experience.
+- **Responsive design:** Styled with Tailwind CSS for a mobile-first approach.
+- **Animations:** Uses Framer Motion for smooth animations and transitions.
 
-## React Compiler
+## 🖼️ Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+_A placeholder for screenshots of the project. You can add your screenshots here._
 
-## Expanding the ESLint configuration
+![Project Screenshot 1](./src/assets/images/portfolio-ss-01.png)
+![Project Screenshot 2](./src/assets/images/portfolio-ss-02.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Technologies Used
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Frontend:** React, TypeScript
+- **Styling:** Tailwind CSS
+- **Build Tool:** Vite
+- **Animations:** Framer Motion
+- **Linting:** ESLint
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ⚙️ Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+To get a local copy up and running, follow these simple steps.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js (v18 or higher)
+- npm
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
+
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/your-username/your-repo-name.git
+    ```
+2.  Install NPM packages
+    ```sh
+    npm install
+    ```
+3.  Start the development server
+    ```sh
+    npm run dev
+    ```
+
+## 📜 Available Scripts
+
+In the project directory, you can run:
+
+- `npm run dev`: Runs the app in the development mode.
+- `npm run build`: Builds the app for production.
+- `npm run lint`: Lints the code using ESLint.
+- `npm run preview`: Serves the production build locally.
+
+## 🙏 Acknowledgements
+
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+
