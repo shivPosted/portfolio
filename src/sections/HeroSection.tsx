@@ -6,7 +6,10 @@ import RingOverlay from "../components/RingOverlay";
 
 function HeroSection() {
   return (
-    <div className="container lg:max-w-[80%] py-32 md:py-40 lg:py-50 flex flex-col gap-8 items-center justify-center mx-auto overflow-hidden z-100">
+    <section
+      id="hero-section"
+      className="container lg:max-w-[80%] py-32 md:py-40 lg:py-50 flex flex-col gap-8 items-center justify-center mx-auto overflow-hidden z-100"
+    >
       <div className="flex flex-col items-center">
         <figure className="w-[100px] h-[100px]">
           <img
@@ -34,14 +37,18 @@ function HeroSection() {
         </p>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-4">
-        <button className="inline-flex items-center gap-2 border rounded-xl border-white/15  px-6 h-12">
-          <span className="font-semibold">Explore my work</span>
-          <Arrowdown size="size-4" />
-        </button>
-        <button className="inline-flex items-center gap-2 border rounded-xl border-white bg-white text-gray-900 px-6 h-12">
-          <span>👋</span>
-          <span className="font-semibold">Let's Connect</span>
-        </button>
+        <a href="https://github.com/shivPosted" className="font-semibold z-100">
+          <button className="cursor-pointer inline-flex items-center gap-2 border rounded-xl border-white/15  px-6 h-12">
+            Explore my work
+            <Arrowdown size="size-4" />
+          </button>
+        </a>
+        <a href="https://x.com/shiv_posted" className="font-semibold z-100">
+          <button className="cursor-pointer inline-flex items-center gap-2 border rounded-xl border-white bg-white text-gray-900 px-6 h-12">
+            <span>👋</span>
+            Let's Connect
+          </button>
+        </a>
       </div>
       <div className="size-inherit absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] overflow-clip">
         <GrainOverlay />
@@ -53,7 +60,7 @@ function HeroSection() {
         <RingOverlay size="3xl" />
         <HeroOrbit />
       </div>
-    </div>
+    </section>
   );
 }
 export default HeroSection;

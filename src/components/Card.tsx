@@ -9,7 +9,7 @@ function Card({ children, className, color = "bg-slate-800" }: CardPropType) {
   return (
     <div
       className={[
-        "flex rounded-3xl relative overflow-clip outline-2 -outline-offset-2 outline-white/20 ",
+        "flex rounded-3xl overflow-clip relative outline-2 -outline-offset-2 outline-white/20 ",
         className,
         color,
       ].join(" ")}

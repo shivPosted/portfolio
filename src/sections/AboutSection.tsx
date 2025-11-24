@@ -56,7 +56,7 @@ const hobbies = [
 function AboutSection() {
   const contraintRef = useRef(null);
   return (
-    <div className="mt-32 lg:mb-52">
+    <section id="about-section" className="mt-32 lg:mb-52">
       <div className="container mx-auto lg:max-w-[80%]">
         <SectionHeader
           eyebrow="About Me"
@@ -140,7 +140,7 @@ function AboutSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 export default AboutSection;
