@@ -1,13 +1,15 @@
-import { useState, type MouseEvent } from "react";
+import { useState, type MouseEvent, type MouseEventHandler } from "react";
 
 function Navbar() {
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState<string | undefined>(
+    "home",
+  );
 
-  function handleClick(e: MouseEvent) {
-    const target = e.target.closest(".nav-item");
+  const handleClick: MouseEventHandler = (e: MouseEvent) => {
+    const target = e.currentTarget as HTMLElement;
     if (!target) return;
     setActiveSection(target.dataset.linkName);
-  }
+  };
 
   return (
     <nav
