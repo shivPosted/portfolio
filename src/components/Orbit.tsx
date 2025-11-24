@@ -3,9 +3,9 @@ import type { ComponentPropsWithoutRef } from "react";
 type OrbitPropType = ComponentPropsWithoutRef<"div"> & {
   size: number;
   rotation: number;
-  toggleSpin: boolean;
-  toggleOrbit: boolean;
-  spinDuration: string;
+  toggleSpin?: boolean;
+  toggleOrbit?: boolean;
+  spinDuration?: string;
   orbitDuration: string;
 };
 
