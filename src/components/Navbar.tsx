@@ -6,7 +6,7 @@ function Navbar() {
   );
 
   const handleClick: MouseEventHandler = (e: MouseEvent) => {
-    const target = e.currentTarget as HTMLElement;
+    const target = e.target as HTMLElement;
     if (!target) return;
     setActiveSection(target.dataset.linkName);
   };
@@ -17,7 +17,7 @@ function Navbar() {
       onClick={handleClick}
     >
       <a
-        href="#"
+        href="#hero-section"
         data-link-name="home"
         className={[
           "nav-item",
