@@ -1,6 +1,6 @@
 import Card from "../components/Card";
 import SectionHeader from "../components/SectionHeader";
-import BookImg from "../assets/images/book-cover.png";
+import BookImg from "../assets/images/myBookCover.jpg";
 import StaticMapImg from "../assets/images/jaipur-map.png";
 import MyAvatarImg from "../assets/images/my-avatar.jpg";
 import CardHeader from "../components/CardHeader";

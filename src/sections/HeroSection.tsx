@@ -22,9 +22,7 @@ function HeroSection() {
           <div className="size-2.5 rounded-full bg-green-500 relative">
             <div className="size-2.5 rounded-full bg-green-500 absolute animate-ping"></div>
           </div>
-          <span className="text-sm font-medium">
-            Available for new projects
-          </span>
+          <span className="text-sm font-medium">Shiv Pratap Singh</span>
         </div>
       </div>
       <div className="text-center md:max-w-lg md:mx-auto">
@@ -32,8 +30,9 @@ function HeroSection() {
           Building exceptional user experience
         </h1>
         <p className="mt-4 text-white/60 text-pretty px-2 md:text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat animi
-          consectetur velit reprehenderit, cupiditate ea.
+          I bring ideas to life with code — blending clean UI, powerful backend
+          logic. Full-stack development is where creativity meets engineering,
+          and that’s exactly where I thrive.
         </p>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-4">

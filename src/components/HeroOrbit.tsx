@@ -4,7 +4,7 @@ import Orbit from "./Orbit";
 
 function HeroOrbit() {
   return (
-    <div className="hidden md:block">
+    <div className="">
       <Orbit
         size={430}
         rotation={-14}
